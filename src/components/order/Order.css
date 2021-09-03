@@ -1,0 +1,53 @@
+#order-wrapper{
+    width: 50%;
+    height: 730px;
+    position: fixed;
+    top: 130px;
+    left: 500px;
+    background-color: rgb(157, 171, 216);
+    border-radius: 12px;
+    border: wheat 3px solid;
+}
+
+#order-form {
+    position: relative;
+    left: 80px;
+    top: 50px;
+}
+
+#order-form input {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 2px solid wheat;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: rgb(189, 196, 216);
+}
+
+#submit-btn{
+    width: 30%;
+    position: relative;
+    top: 220px;
+    left: 270px;
+}
+
+#item-details{
+    position: relative;
+    top: -370px;
+    left: 610px;
+}
+
+#item-details h1 {
+    font-size: 30px;
+}
+
+#item-details h2 {
+    position: relative;
+    left: 50px;
+}
+
+#order-form label{
+    font-size: 25px;
+}

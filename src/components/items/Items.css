@@ -1,0 +1,101 @@
+#item-wrapper {
+    width: 50%;
+    height: 730px;
+    position: fixed;
+    top: 130px;
+    left: 500px;
+    background-color: rgb(157, 171, 216);
+    border-radius: 12px;
+    border: wheat 3px solid;
+}
+
+#pic {
+    width: 450px;
+    height: 450px;
+    opacity: 0.8;
+    border-radius: 12px;
+    position: relative;
+    right: auto;
+    top: -460px;
+}
+
+#desc {
+    border: solid 3px wheat;
+    border-radius: 12px;
+    width: 450px;
+    position: relative;
+    height: 170px;
+    top: 167px;
+    left: -1px;
+    font-size: 15px;
+}
+
+#title {
+    margin-top: -8px;
+    position: relative;
+    top: 20px;
+    left: 490px;
+    font-size: 50px;
+    width: 45%;
+    text-align: center;
+    background-color: rgb(157, 171, 180);
+    border-radius: 15px;
+    border-bottom: solid wheat 3px;
+}
+
+#price {
+    position: relative;
+    left: 705px;
+    top: 30px;
+    font-size: 40px;
+    width: 25%;
+    text-align: center;
+    background-color: rgb(157, 171, 180);
+    border-radius: 15px;
+    border-bottom: solid wheat 3px;}
+
+#number {
+    position: relative;
+    left: 705px;
+    top: 30px;
+    border-bottom: solid wheat 3px;
+    font-size: 30px;
+    width: 25%;
+    text-align: center;
+    background-color: rgb(157, 171, 180);
+    border-radius: 15px;
+}
+
+.buy-btn {
+    position: relative;
+    right: 452px;
+    top: -213px;
+    width: 220px;
+    height: 92px;
+    border-radius: 15px;
+    border: wheat solid 3px;
+    font-size: 35px;
+    background-color: dimgray;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#date-posted {
+    position: relative;
+    left: 705px;
+    top: 30px;
+    border-bottom: solid wheat 3px;
+    font-size: 30px;
+    width: 25%;
+    text-align: center;
+    background-color: rgb(157, 171, 180);
+    border-radius: 15px;
+}
+
+#buy-btn:hover {
+    background-color: gray;
+}
+
+a {
+    color: black;
+}

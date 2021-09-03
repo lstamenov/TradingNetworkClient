@@ -1,0 +1,130 @@
+#form-wrapper {
+    height: 70%;
+    width: 50%;
+    position: fixed;
+    top: 150px;
+    left: 500px;
+    background-color: rgb(157, 171, 216);
+    opacity: 0.8;
+    border-radius: 12px;
+}
+
+#add-form {
+    width: 60%;
+    position: relative;
+    left: 190px;
+    height: 60%;
+}
+
+#add-form input[text] {
+    margin-bottom: 10px;
+    position: relative;
+    left: 385px;
+}
+
+#add-form label {
+    margin-bottom: 10px;
+    position: relative;
+    left: 385px;
+}
+
+#photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    font-size: 16px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px black;
+    outline: none;
+}
+
+#desc-item {
+    position: relative;
+    left: -220px;
+    bottom: 435px;
+    text-align: center;
+    font-size: 25px;
+}
+
+#desc-item textarea{
+    resize: none;
+    width: 80%;
+    height: 250px;
+    border: 2px wheat solid;
+    border-radius: 15px;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+#desc-item h2 {
+    position: relative;
+    top: 20px;
+}
+
+.text-labels {
+    font-size: 20px;
+    top: -150px;
+    left: 200px;
+}
+
+.text-fields{
+    background-color: transparent;
+    position: relative;
+    left: 485px;
+    top: -200px;
+    font-size: 25px;
+    height: 55px;
+    width: 250px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    border: wheat 2px solid;
+    margin-top: 5px;
+}
+
+#default-photo {
+    width: 240px;
+    height: 200px;
+    position: relative;
+    top: 0px;
+    left: -190px;
+    border: wheat 1px solid;
+    border-radius: 10px;
+}
+
+#upload-btn {
+    border-radius: 20px;
+    border: wheat 2px solid;
+    width: 160px;
+    height: 75px;
+    background-color: gray;
+    font-size: 30px;
+    position: relative;
+    left: -390px;
+    top: 85px;
+    cursor: pointer;
+}
+
+#upload-btn:hover {
+    background-color: dimgray;
+}
+
+#submit-item-btn {
+    position: relative;
+    bottom: 500px;
+    right: -500px;
+    width: 180px;
+    height: 60px;
+    font-size: 30px;
+    background-color: gray;
+    border: wheat 3px solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#submit-item-btn:hover {
+    background-color: rgb(157, 171, 190);
+}

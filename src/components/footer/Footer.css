@@ -1,0 +1,27 @@
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    border: none;
+    border-top: solid wheat 3px;
+    display: flex;
+    justify-content: left;
+    background-color: dimgray;
+}
+
+#gmail {
+    height: 60px;
+    position: relative;
+    bottom: 87px;
+    padding-right: 30px;
+}
+
+.icons {
+    height: 80px;
+    position: relative;
+    top: auto;
+    padding-right: 30px;
+}
+
+

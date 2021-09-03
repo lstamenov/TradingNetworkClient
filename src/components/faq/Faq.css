@@ -1,0 +1,11 @@
+#faq {
+    position: fixed;
+    left: 500px;
+    top: 156px;
+    height: 70%;
+    width: 50%;
+    background-color: rgb(157, 171, 216);
+    opacity: 0.8;
+    border-radius: 15px;
+    text-align: left;
+}

@@ -1,0 +1,102 @@
+#list-wrapper {
+    width: 50%;
+    height: fit-content;
+    position: relative;
+    top: 250px;
+    left: 500px;
+    background-color: rgb(157, 171, 216);
+    border-radius: 12px;
+    border: wheat 3px solid;
+}
+
+.single-item {
+    width: 90%;
+    height: 100px;
+    background-color: rgb(157, 171, 180);
+    margin-bottom: 17px;
+    margin-top: 17px;
+    border: wheat solid 2px;
+    border-radius: 15px;
+    position: relative;
+    left: 45px;
+}
+
+.pics {
+    width: 97px;
+    height: 97px;
+    position: relative;
+    top: 0px;
+    border-radius: 15px;
+    border: wheat solid 3px;
+}
+
+.titles {
+    width: 150px;
+    height: 97px;
+    background-color: rgb(179, 184, 187);
+    border-radius: 15px;
+    border: wheat solid 3px;
+    position: relative;
+    top: -124px;
+    left: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.numbers {
+    width: 150px;
+    height: 97px;
+    background-color: rgb(179, 184, 187);
+    border-radius: 15px;
+    border: wheat solid 3px;
+    position: relative;
+    top: -243px;
+    left: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.item-details {
+    width: 150px;
+    height: 100px;
+    background-color: rgb(143, 212, 170);
+    border-radius: 15px;
+    border: wheat solid 3px;
+    position: relative;
+    top: -362px;
+    left: 705px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.item-details:hover {
+    background-color: transparent;
+}
+
+.crud-btns {
+    position: relative;
+    top: 10px;
+    right: -370px;
+    height: 80px;
+    width: 200px;
+    margin: 20px;
+    font-size: 30px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+#add-item {
+    background-color: rgb(147, 228, 54);
+}
+
+#add-item:hover {
+    background-color: rgb(147, 188, 54);
+}
