@@ -112,9 +112,9 @@
     background-color: dimgray;
 }
 
-#submit-item-btn {
+#add-item-btn {
     position: relative;
-    bottom: 500px;
+    bottom: 100px;
     right: -500px;
     width: 180px;
     height: 60px;
@@ -125,6 +125,6 @@
     cursor: pointer;
 }
 
-#submit-item-btn:hover {
+#add-item-btn:hover {
     background-color: rgb(157, 171, 190);
 }

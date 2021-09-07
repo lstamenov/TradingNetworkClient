@@ -13,12 +13,16 @@ import NotFound from './components/erropage/NotFound';
 import Order from './components/order/Order';
 import SuccessfulOrder from './components/order/SuccessfulOrder';
 import Login from './components/login/Login';
+import Register from './components/register/Register';
 
 function App() {
   return (
     <div>
-      <Nav val="0"/>
+      <Nav />
       <Switch>
+        <Route path="/register">
+          <Register />
+        </Route>
         <Route path="/successful-order">
           <SuccessfulOrder />
         </Route>
@@ -41,7 +45,7 @@ function App() {
           <AddPost />
         </Route>
         <Route path="/login" exact>
-          <Login />
+          {localStorage.getItem('user') ? <NotFound /> : <Login />}
         </Route>
         <Route path="/" exact>
          <Home />

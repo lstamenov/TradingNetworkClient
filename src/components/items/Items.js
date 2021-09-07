@@ -10,7 +10,7 @@ function Items (){
     const id = pathArr[pathArr.length - 1];
     
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/no-auth/items/${id}`)
+        axios.get(`http://localhost:8080/api/items/view/${id}`)
         .then(resp => {
             setItem(resp.data);
         })

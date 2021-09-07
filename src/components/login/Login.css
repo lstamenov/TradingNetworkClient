@@ -18,6 +18,7 @@
     border: wheat solid 2px;
     font-size: 20px;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 #login-form label{
@@ -46,9 +47,16 @@
     height: 50px;
     cursor: pointer;
     position: relative;
-    top: 30px;
+    top: 20px;
 }
 
 #login-btn:hover{
     background-color: rgb(157, 171, 216);;
+}
+
+#login-error{
+    position: relative;
+    top: 50px;
+    left: 0px;
+    font-size: 15px;
 }

@@ -3,22 +3,29 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ListItems.css';
 
-const ListItems = () => {
-    useEffect(() => {
-        fetchItems();
-    }, []);
-
+const ListItems = () => {  
     const [items, setItems] = useState([]);
 
-    const fetchItems = async () => {
-        const data = await axios.get('http://localhost:8080/api/no-auth/all-items');
-        const itemsArr = await data.data;
-        setItems(itemsArr);
-    }
+    useEffect(() => {
+        axios.get('http://localhost:8080/api/items/view/all')
+        .then(res => setItems(res.data))
+        .catch(err => console.log(err));
+    }, [1]);
+
+    // const fetchItems = async () => {
+    //     try{
+    //         const data = await axios.get('http://localhost:8080/api/items/view/all');
+    //         const itemsArr = await data.data;
+    //         setItems(itemsArr);
+    //     }catch(err){
+    //         console.log(err);
+    //     }
+        
+    // }
 
     return (
         <div id="list-wrapper">
-            <button className="crud-btns" id="add-item"><Link to="/add-post">Add item for sale</Link></button>
+            <button className="crud-btns" id="add-item">{<Link to={localStorage.getItem('user') ? "/add-post" : "/login"}>Add item for sale</Link>}</button>
         
             {items.map(item => (
                 <div className="single-item" key={item.id}>

@@ -21,6 +21,14 @@ div .btn {
     font-size: 35px;
 }
 
+#login-logout{
+    width: 9%;
+    height: 110px;
+    background-color: transparent;
+    border: none;
+    font-size: 35px;
+}
+
 a:visited {
     color: black;
 }
@@ -33,15 +41,10 @@ button:hover {
     background-color: gray;
 }
 
-.shopping-cart {
-    position: relative;
-    left: 17px;
-    top: 0px;
-    width: 9%;
-    height: 110px;
-    background-color: transparent; 
-    border: none;
-    font-size: 35px;
+#login-logout:hover{
+    background-color: gray;
 }
+
+
 
 

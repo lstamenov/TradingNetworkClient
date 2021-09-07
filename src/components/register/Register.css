@@ -1,0 +1,58 @@
+#registration-wrapper{
+    width: 35%;
+    height: 630px;
+    position: relative;
+    top: 180px;
+    left: 650px;
+    background-color: rgb(157, 171, 216);
+    border-radius: 12px;
+    border: wheat 3px solid;
+    opacity: 0.95;
+    text-align: center;
+}
+
+#registration-wrapper input {
+    width: 250px;
+    height: 30px;
+    font-size: 20px;
+    background-color: rgb(158, 179, 207);
+    box-shadow: 10px 10px 8px #888888;
+    border-radius: 10px;
+    position: relative;
+    top: 20px;
+    margin-bottom: 10px;
+}
+
+label {
+    position: relative;
+    top: 20px;
+    font-size: 20px;
+}
+
+input:focus{
+    border: yellowgreen;
+}
+
+#register-button{
+    position: relative;
+    top: 50px;
+    width: 180px;
+    height: 45px;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 12px;
+    box-shadow: 10px 10px 8px #888888;
+    border: wheat 2px solid;
+    font-size: 25px;
+}
+
+#register-button:hover{
+    background-color: rgb(126, 164, 214);
+}
+
+.errors {
+    color: red;
+    position: relative;
+    top: 15px;
+    left: 0px;
+}
