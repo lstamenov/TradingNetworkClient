@@ -1,0 +1,51 @@
+.user-card{
+    background-color: rgb(136, 156, 194);
+    width: 55%;
+    height: 280px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 10px 10px 10px gray;
+    position: relative;
+    top: -240px;
+    left: 0px;
+}
+
+.user-card img {
+    position: relative;
+    top: -0px;
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 5px 5px 10px gray;
+    padding: 20px;
+}
+
+.user-details{
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    background-color: rgb(157, 171, 180);
+    border-radius: 12px;
+    position: relative;
+    width: 62%;
+    text-align: right;
+    padding-right: 5px;
+    height: 195px;
+}
+
+.view-user{
+    font-size: 25px;
+    float: right;
+    position: relative;
+    width: 200px;
+    right: 160px;
+    top: 15px;
+    height: 60px;
+    box-shadow: 5px 5px 10px gray;
+    background-color: rgb(91, 152, 202);
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+

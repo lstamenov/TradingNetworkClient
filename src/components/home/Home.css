@@ -1,0 +1,15 @@
+.about{
+    animation: heading;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes heading {
+    0%{
+        top: -200px;
+    }   
+    
+    100%{
+        top: 150px;
+    }
+}

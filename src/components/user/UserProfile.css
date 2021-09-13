@@ -1,0 +1,106 @@
+.user-profile-page{
+    background-color: rgb(157, 171, 180);
+    width: 50%;
+    margin: auto;
+    height: 700px;
+    border-radius: 10px;
+    opacity: 0.9;
+    position: relative;
+    top: 120px;
+    box-shadow: 7px 12px 20px  ;
+}
+
+.user-profile-page img{
+    position: relative;
+    top: -15px;
+    left: 680px;
+    margin: 30px;
+    width: 120px;
+    height: 150px;
+    border-radius: 10px;
+    padding: 50px;
+    box-shadow: 10px 10px 20px;
+}
+
+#change-pic{
+    background-color: rgb(111, 143, 201);
+    float: right;
+    position: relative;
+    top: 271px;
+    padding: 5px;
+    right: 25px;
+    border-radius: 12px;
+    border: none;
+    border-bottom: solid 2px wheat;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#change-pic:hover{
+    background-color: rgb(151, 143, 201);
+}
+
+.detail{
+    position: relative;
+    top: -300px;
+    margin: 30px;
+    left: auto;
+    bottom: 200px;
+    box-shadow: 3px 7px 10px;
+    width: fit-content;
+    text-align: right;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.detail span {
+    font-size: 25px;
+}
+.user-item{
+    background-color: rgb(209, 209, 209);
+    width: 95%;
+    margin: 10px;
+    box-shadow: 8px 8px 15px;
+    border-radius: 10px;
+}
+
+.user-item img{
+    margin: 0;
+    width: 100%;
+    border-radius: 10px;
+    height: 200px;
+    padding: 0px;
+    left: 0px;
+    top: auto;
+}
+
+.user-items{
+    height: 350px;
+    background: rgb(184, 181, 181);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+    top: -220px;
+    overflow-y: scroll;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    width: 96%;
+}
+
+#item-title{
+    position: relative;
+    text-align: center;
+    top: -20px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0px 8px 10px rgb(49, 49, 58);
+    border-top: 1px solid black;
+}
+
+.date-price{
+    text-align: right;
+    position: relative;
+    top: -20px;
+    margin-right: 20px;
+    box-shadow: 3px 3px 10px;
+    width: fit-content;
+}

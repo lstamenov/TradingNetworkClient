@@ -6,8 +6,26 @@
     left: 650px;
     background-color: rgb(157, 171, 216);
     border-radius: 12px;
-    border: wheat 3px solid;
     opacity: 0.95;
+    box-shadow: 10px 12px 15px black;
+    animation: anim;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes anim {
+    0%{
+        top: -50px;
+    }
+
+    50%{
+        top: 350px;
+    }
+
+    100%{
+        top: 230px;
+    }
 }
 
 #login-form input{
@@ -15,10 +33,11 @@
     width: 320px;
     height: 35px;
     border-radius: 12px;
-    border: wheat solid 2px;
+    border-top: wheat solid 2px;
     font-size: 20px;
     margin-bottom: 20px;
     margin-top: 20px;
+    box-shadow: 5px 5px 15px black;
 }
 
 #login-form label{
@@ -42,12 +61,13 @@
     font-size: 25px;
     background-color: transparent;
     border-radius: 12px;
-    border: wheat solid 1px;
+    border-top: wheat solid 1px;
     width: 170px;
     height: 50px;
     cursor: pointer;
     position: relative;
     top: 20px;
+    box-shadow: 3px 5px 15px black;
 }
 
 #login-btn:hover{
@@ -59,4 +79,10 @@
     top: 50px;
     left: 0px;
     font-size: 15px;
+}
+
+.loader{
+    position: relative;
+    bottom: 150px;
+    left: 350px;
 }

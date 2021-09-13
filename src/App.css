@@ -1,0 +1,60 @@
+.nav {
+    margin-top: -8px;
+    background-color: dimgray;
+    position: fixed;
+    left: -8px;
+    top: 0px;
+    height: 110px;
+    width: 100%;
+    padding-right: 16px;
+    border-bottom: solid wheat 3px;
+    z-index: 100;
+}
+
+div .btn {
+    position: relative;
+    left: 1410px;
+    top: -110px;
+    width: 9%;
+    height: 110px;
+    background-color: transparent;
+    border: none;
+    font-size: 35px;
+}
+
+a:visited {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+#login-logout:hover{
+    background-color: gray;
+}
+
+.auth-btns button{
+    width: 10%;
+    height: 110px;
+    font-size: 35px;
+    background-color: transparent;
+    border: none;
+}
+
+.auth-btns button:hover{
+    background-color: gray;
+}
+
+#profili-link-pic{
+    position: relative;
+    top: 15px;
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}

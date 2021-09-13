@@ -7,95 +7,123 @@
     background-color: rgb(157, 171, 216);
     border-radius: 12px;
     border: wheat 3px solid;
+    font-family: cursive;
 }
 
 #pic {
-    width: 450px;
-    height: 450px;
+    width: 420px;
+    height: 420px;
     opacity: 0.8;
     border-radius: 12px;
     position: relative;
     right: auto;
-    top: -460px;
+    top: -247px;
 }
 
 #desc {
-    border: solid 3px wheat;
-    border-radius: 12px;
-    width: 450px;
-    position: relative;
-    height: 170px;
-    top: 167px;
-    left: -1px;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+    width: 44%;
+    height: 150px;
     font-size: 15px;
+    float: right;
+    position: relative;
+    top: 85px;
+    right: 10px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-y: auto;
+    font-size: 20px;
 }
 
 #title {
-    margin-top: -8px;
+    float: right;
     position: relative;
-    top: 20px;
-    left: 490px;
+    right: 15px;
+    bottom: 20px;
     font-size: 50px;
     width: 45%;
     text-align: center;
     background-color: rgb(157, 171, 180);
     border-radius: 15px;
-    border-bottom: solid wheat 3px;
+    box-shadow: 10px 10px 10px gray;
 }
 
 #price {
     position: relative;
-    left: 705px;
-    top: 30px;
-    font-size: 40px;
-    width: 25%;
-    text-align: center;
+    left: 740px;
+    top: 80px;
+    font-size: 30px;
+    width: fit-content;
     background-color: rgb(157, 171, 180);
     border-radius: 15px;
-    border-bottom: solid wheat 3px;}
+    padding: 10px;
+    box-shadow: 10px 10px 10px gray;
+}
+
+#price span {
+    font-size: 25px;
+}
 
 #number {
     position: relative;
-    left: 705px;
-    top: 30px;
-    border-bottom: solid wheat 3px;
+    right: -630px;
+    text-align: right;
+    top: 80px;
     font-size: 30px;
-    width: 25%;
-    text-align: center;
+    width: fit-content;
+    padding: 10px;
     background-color: rgb(157, 171, 180);
-    border-radius: 15px;
+    border-radius: 12px;
+    box-shadow: 10px 10px 10px gray;
+}
+
+#number span {
+    font-size: 25px;
 }
 
 .buy-btn {
     position: relative;
-    right: 452px;
-    top: -213px;
+    top: -350px;
+    float: right;
     width: 220px;
     height: 92px;
-    border-radius: 15px;
-    border: wheat solid 3px;
-    font-size: 35px;
+    right: 100px;
+    border-radius: 12px;
+    border: none;
+    font-size: 30px;
     background-color: dimgray;
     cursor: pointer;
-    margin-right: 20px;
+    box-shadow: 10px 10px 10px gray;
+
 }
 
 #date-posted {
     position: relative;
-    left: 705px;
-    top: 30px;
-    border-bottom: solid wheat 3px;
+    left: 545px;
+    top: 80px;
     font-size: 30px;
-    width: 25%;
-    text-align: center;
+    width: fit-content;
+    padding: 10px;
     background-color: rgb(157, 171, 180);
-    border-radius: 15px;
+    border-radius: 12px;
+    box-shadow: 10px 10px 10px gray;
+
 }
 
-#buy-btn:hover {
-    background-color: gray;
+#date-posted span {
+    font-size: 25px;
+}
+
+.buy-btn:hover {
+    box-shadow: 3px 7px 10px black;
 }
 
 a {
     color: black;
 }
+
+/* .user-card{
+    position: relative;
+    top: -300px;   
+} */

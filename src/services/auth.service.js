@@ -11,7 +11,7 @@ const login = async (username, password) => {
             localStorage.setItem('user', JSON.stringify(response.data));
         }
         return true;
-
+        
     }catch(e){
         console.log(e);
         return false;
@@ -20,6 +20,7 @@ const login = async (username, password) => {
 
 const logout = () => {
     localStorage.removeItem('user');
+    window.location.reload();
 }
 
 const register = (firstName, lastName, email, username, password) => {
@@ -32,4 +33,8 @@ const register = (firstName, lastName, email, username, password) => {
     });
 }
 
-export default {login, register, logout};
+const getCurrentUser = () => {
+    return JSON.parse(localStorage.getItem("user"));
+  };
+
+export default {login, register, logout, getCurrentUser};

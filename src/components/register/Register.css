@@ -56,3 +56,8 @@ input:focus{
     top: 15px;
     left: 0px;
 }
+
+.submit-loader{
+    position: relative;
+    top: -150px;
+}

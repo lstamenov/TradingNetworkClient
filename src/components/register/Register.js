@@ -3,6 +3,7 @@ import validator from '../../services/register.validatons.js';
 import authService from '../../services/auth.service.js';
 import { useHistory } from 'react-router-dom';
 import './Register.css';
+import HashLoader from 'react-spinners/HashLoader';
 
 const Register = () => {
     const isValid = () => {
@@ -21,6 +22,8 @@ const Register = () => {
     const [firstNameError, setFirstNameError] = useState('');
     const [lastNameError, setLastNameError] = useState('');
     const [usernameError, setUsernameError] = useState('');
+
+    const [isLoading, setIsLoading] = useState(false);
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -71,11 +74,15 @@ const Register = () => {
 
     const submitRegisterForm = (e) => {
         e.preventDefault();
-        if(isValid()){
-            authService.register(firstName, lastName, email, username, password);
-            clearInputFields();
-            history.push('/login');
-        }
+        setIsLoading(true);
+        setTimeout(() => {
+            setIsLoading(false);     
+            if(isValid()){
+                authService.register(firstName, lastName, email, username, password);
+                clearInputFields();
+                history.push('/login');
+            }
+        }, 3000);
     }
 
     return (
@@ -100,6 +107,7 @@ const Register = () => {
                 <input id="password-conf" type="password" onChange={handleConfPasswordChange}/><br/>
                 <button onClick={submitRegisterForm} type="button" id="register-button">Submit</button>
             </form>
+            {isLoading && <div className="submit-loader"><HashLoader color={"white"} size={150}/></div>}
         </div>
     )
 }

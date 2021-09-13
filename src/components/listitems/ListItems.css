@@ -1,16 +1,30 @@
 #list-wrapper {
     width: 50%;
-    height: fit-content;
+    height: 600px;
     position: relative;
     top: 250px;
     left: 500px;
     background-color: rgb(157, 171, 216);
     border-radius: 12px;
     border: wheat 3px solid;
+    box-shadow: 10px 15px 15px gray;
+    animation: heading;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes heading {
+    0%{
+        top: -200px;
+    }   
+    
+    100%{
+        top: 150px;
+    }
 }
 
 .single-item {
-    width: 90%;
+    width: 95.7%;
     height: 100px;
     background-color: rgb(157, 171, 180);
     margin-bottom: 17px;
@@ -18,26 +32,53 @@
     border: wheat solid 2px;
     border-radius: 15px;
     position: relative;
-    left: 45px;
+    left: 10px;
+    box-shadow: 8px 8px 10px gray;
+}
+
+.skeleton {
+    animation: loading 1s linear infinite alternate;
+}
+
+@keyframes loading {
+    0%{background-color: hsl(199, 20%, 63%);}
+    100%{background-color: hsl(199, 20%, 85%);}
+}
+
+.vertical-list {
+    width: 95%;
+    height: 370px;
+    overflow: auto;
+    border: 3px wheat solid;
+    border-radius: 12px;
+    position: relative;
+    left: 20px;
+    top: 50px;
+    opacity: .9;
+    box-shadow: 10px 15px 15px gray;
+
 }
 
 .pics {
-    width: 97px;
-    height: 97px;
+    width: 98px;
+    height: 98px;
     position: relative;
     top: 0px;
+    left: -1px;
     border-radius: 15px;
-    border: wheat solid 3px;
+    border: wheat solid 1px;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
 .titles {
     width: 150px;
-    height: 97px;
+    height: 98px;
     background-color: rgb(179, 184, 187);
     border-radius: 15px;
-    border: wheat solid 3px;
+    border: wheat solid 1px;
     position: relative;
-    top: -124px;
+    top: -119px;
     left: 110px;
     display: flex;
     align-items: center;
@@ -47,12 +88,12 @@
 
 .numbers {
     width: 150px;
-    height: 97px;
+    height: 98px;
     background-color: rgb(179, 184, 187);
     border-radius: 15px;
-    border: wheat solid 3px;
+    border: wheat solid 1px;
     position: relative;
-    top: -243px;
+    top: -235px;
     left: 270px;
     display: flex;
     align-items: center;
@@ -65,9 +106,9 @@
     height: 100px;
     background-color: rgb(143, 212, 170);
     border-radius: 15px;
-    border: wheat solid 3px;
+    border: wheat solid 2px;
     position: relative;
-    top: -362px;
+    top: -353px;
     left: 705px;
     display: flex;
     align-items: center;
