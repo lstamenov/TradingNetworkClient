@@ -16,8 +16,7 @@ const AddPost = () => {
         let itemName = inputElements[0].value;
         let itemPrice = inputElements[1].value;
         let itemDesc = document.getElementById('desc-text').value;
-        console.log(itemDesc);
-        let itemNumber = inputElements[4].value;
+        let itemNumber = inputElements[2].value;
 
         let form = new FormData();
 
@@ -25,16 +24,8 @@ const AddPost = () => {
         form.append('description', itemDesc);
         form.append('price', itemPrice);
         form.append('phoneNumber', itemNumber);
-        console.log(photo);
         form.append('picture', photo);
         form.append('ownerId', JSON.parse(localStorage.getItem('user')).id);
-    
-        // 'title': itemName,
-        // 'description': itemDesc,
-        // 'price': itemPrice,
-        // 'phoneNumber': itemNumber,
-        // 'picture': photo,
-        // 'ownerId': JSON.parse(localStorage.getItem('user')).id
 
         axios.post('http://localhost:8080/api/items/add', form, {headers: header.authHeader()})
         .then(res => console.log(res))  
@@ -65,10 +56,6 @@ const AddPost = () => {
                     <input name="title" className="text-fields" type="text"></input><br/>
                     <label htmlFor="price" className="text-labels">Price</label><br/>
                     <input type="number" className="text-fields" name="price"/><br/>
-                    <label htmlFor="email" className="text-labels">Email</label><br/>
-                    <input name="email" type="text" className="text-fields"/><br/>
-                    <label htmlFor="password" className="text-labels">Password</label><br/>
-                    <input name="password" className="text-fields" type="password"/><br/>
                     <label htmlFor="number" className="text-labels">Number</label><br/>
                     <input name="number" className="text-fields" type="text"/><br/>
                     <input onClick={submitHandler} id="add-item-btn" value="Create" type="submit"/>

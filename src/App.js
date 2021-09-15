@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css';
-import { Route, Switch } from 'react-router';
+import { Route, Switch, useLocation } from 'react-router';
 import './App.css';
 import {Link} from 'react-router-dom';
 import About from './components/about/About';
@@ -19,24 +19,44 @@ import {useState, useEffect} from 'react';
 import authService from './services/auth.service';
 import myProfilePic from './profile.png';
 import UserProfile from './components/user/UserProfile';
+import EditItem from './components/items/EditItem';
+import axios from 'axios';
+
 
 function App() {
-    
-  const [currentUser, setCurrentUser] = useState(undefined);
+  const [currentUser, setCurrentUser] = useState();
   useEffect(() => {
-    const user = authService.getCurrentUser();
-
-    if (user) {
-      setCurrentUser(user);
+    if(authService.getCurrentUser()){
+      axios.get(`http://localhost:8080/api/user/view/${authService.getCurrentUser().username}`)
+      .then(res => setCurrentUser(res.data))
+      .catch(err => console.log(err));
     }
   }, []);
+
+
+  const isUserItem = (itemId) => {
+    let id = String(itemId).substring(1);
+    let result = false;
+
+    if(currentUser){
+      console.log(id);
+      currentUser.itemsPosted.forEach(itm => {
+        if(itm.id == id){
+          result = true;
+        }
+      })
+    }
+    return result;
+  }
+
+  const location = useLocation();
 
   return (
     <div>
        <div className="nav">
             {currentUser ? 
             (<div className="auth-btns">
-                <Link to={`user/${currentUser.username}`}><img id="profili-link-pic" src={myProfilePic}></img></Link>
+                <Link to={`/user/${currentUser.username}`}><img id="profili-link-pic" src={myProfilePic}></img></Link>
                 <button onClick={authService.logout}><Link to="login">Logout</Link></button>
             </div>) : (
               <div className="auth-btns">
@@ -49,6 +69,11 @@ function App() {
             <button className="btn"><Link to="/items">Items</Link></button>
         </div>
       <Switch>
+        <Route path="/items/edit/:id" exact>
+          {
+            currentUser ? isUserItem(location.pathname.substring(11)) ? <EditItem /> : <NotFound /> : <NotFound />
+          }
+        </Route>
         <Route path="/register">
           <Register />
         </Route>

@@ -19,7 +19,8 @@ const UserCard = (props) => {
     return(
         <div className="user-card">
             <div>
-                <img src={user.picture ? `data:image/jpeg;base64,${user.picture}` : defaultPhoto}></img>
+            {user.profilePicture ? <img src={`data:image/jpeg;base64,${user.profilePicture}`}></img> : <img src={defaultPhoto}></img>}
+
                 <div className="user-details">
                     <h2>{user.username}</h2>
                     <h2>{user.email}</h2>

@@ -5,6 +5,7 @@ import axios from 'axios';
 import defaultPhoto from './user.png';
 import './UserProfile.css';
 import currentUser from '../../services/auth.service';
+import header from '../../services/auth-header';
 
 const UserProfile = () => {
     const [user, setUser] = useState({});
@@ -13,6 +14,23 @@ const UserProfile = () => {
 
     const location = useLocation();
     const username = location.pathname.substring(6);
+
+    const picUploadClickHandler = () => {
+        const uploader = document.getElementById('pic-uploader');
+        uploader.click();
+    }
+
+    const picUploadChangeHandler = (e) => {
+        const profilePic = e.target.files[0];
+        let fd = new FormData();
+        fd.append('picture', profilePic);
+        fd.append('userId', user.id);
+        axios.post('http://localhost:8080/api/user/change/profile-picture', fd, {headers: header.authHeader()})
+        .then(res => {
+            fetch();
+        })
+        .catch(err => console.log(err));
+    }
 
     const fetch = async () => {
         const res = await axios.get(`http://localhost:8080/api/user/view/${username}`);
@@ -34,8 +52,9 @@ const UserProfile = () => {
         <div className="user-profile-page">
             {!isLoading &&
             <div>
-                <img src={user.picture ? `data:image/jpeg;base64,${user.picture}` : defaultPhoto}></img>
-                <button id="change-pic">change photo</button>
+                {user.profilePicture ? <img id="profile-picture" src={`data:image/jpeg;base64,${user.profilePicture}`}></img> : <img src={defaultPhoto}></img>}
+                {currentUser.getCurrentUser() ? currentUser.getCurrentUser().username === username ? <button onClick={picUploadClickHandler} id="change-pic">change photo</button> : <></> : <></>}
+                <input onChange={picUploadChangeHandler} id="pic-uploader" type="file" style={{'display': 'none'}}/>
                 <h2 className="detail"><span>name: </span>{user.firstName} {user.lastName}</h2>
                 <h2 className="detail"><span>username: </span>{username}</h2>
                 <div className="users-posts">
@@ -61,7 +80,7 @@ const UserProfile = () => {
             {isLoading &&
                 <div>
                     <img className="skeleton"></img>
-                    {currentUser.getCurrentUser() ? currentUser.getCurrentUser().username === username ? <button className="skeleton" style={{color: 'transparent'}} id="change-pic">change photo</button> : <></> : <></>};
+                    {currentUser.getCurrentUser() ? currentUser.getCurrentUser().username === username ? <button className="skeleton" style={{color: 'transparent'}} id="change-pic">change photo</button> : <></> : <></>}
                     <h2 style={{color: 'transparent'}} className="detail skeleton"><span>name: </span>{user.firstName} {user.lastName}</h2>
                     <h2 style={{color: 'transparent'}} className="detail skeleton"><span>username: </span>{username}</h2>
                     <div className="users-posts">

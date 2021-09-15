@@ -3,10 +3,12 @@ import React, { useEffect, useState } from 'react';
 import './Items.css';
 import { useLocation, Link } from 'react-router-dom';
 import UserCard from '../user/UserCard';
+import currUser from '../../services/auth.service';
 
 function Items (){
     const [item, setItem] = useState({});
     const [isLoading, setIsLoading] = useState(true);
+    const [owner, setOwner] = useState({});
 
     const location = useLocation();
     const pathArr = location.pathname.split('/');
@@ -15,6 +17,7 @@ function Items (){
     useEffect(() => {        
         axios.get(`http://localhost:8080/api/items/view/${id}`)
             .then(resp => {
+                setOwner(resp.data.owner);
                 setItem(resp.data);
             })
             .catch(err => console.log(err));
@@ -23,9 +26,9 @@ function Items (){
             setIsLoading(false);
         }, 3000)
     }, []);
-
+    
     let datePosted = String(item.datePosted).substring(0,10);
-
+    
     return (
         <div id="item-wrapper">
             {!isLoading &&
@@ -39,7 +42,8 @@ function Items (){
                 </div>
                 <img id="pic" src={`data:image/jpeg;base64,${item.picture}`} />
                 <UserCard username={item.owner.username}/>
-                <button class="buy-btn"><Link to={{pathname: `/order/${item.id}`}}>Buy Now</Link></button>
+                {currUser.getCurrentUser() && owner ? owner.username === currUser.getCurrentUser().username ? <button className="buy-btn"><Link to={`/items/edit/${item.id}`}>Edit</Link></button> : <button class="buy-btn"><Link to={{pathname: `/order/${item.id}`}}>Buy Now</Link></button>
+ : <button className="buy-btn"><Link to={{pathname: `/order/${item.id}`}}>Buy Now</Link></button>}
             </div>
             }
             {isLoading &&
