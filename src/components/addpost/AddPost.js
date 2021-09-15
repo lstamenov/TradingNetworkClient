@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './AddPost.css';
 import defaultPhoto from './no-image.png';
@@ -7,17 +7,31 @@ import header from '../../services/auth-header';
 
 const AddPost = () => {
     const history = useHistory();
+    const [categories, setCategories] = useState();
+
+    useEffect(() => {
+        axios.get('http://localhost:8080/api/categories/view/all')
+        .then((result) => {
+            setCategories(result.data);
+            console.log(result.data);
+        }).catch((err) => {
+            console.log(err);
+        });
+    }, [])
 
     let submitHandler = (e) => {
         e.preventDefault();
         let inputHtmlElements = document.getElementsByClassName('text-fields');
         let inputElements = [...inputHtmlElements];
+        let categoryOptionsMenu = document.querySelector('.category-options');
+
 
         let itemName = inputElements[0].value;
         let itemPrice = inputElements[1].value;
         let itemDesc = document.getElementById('desc-text').value;
         let itemNumber = inputElements[2].value;
-
+        let categoryName = categoryOptionsMenu.options[categoryOptionsMenu.selectedIndex].text;
+        console.log(categoryName);
         let form = new FormData();
 
         form.append('title', itemName);
@@ -26,6 +40,7 @@ const AddPost = () => {
         form.append('phoneNumber', itemNumber);
         form.append('picture', photo);
         form.append('ownerId', JSON.parse(localStorage.getItem('user')).id);
+        form.append('categoryName', categoryName);
 
         axios.post('http://localhost:8080/api/items/add', form, {headers: header.authHeader()})
         .then(res => console.log(res))  
@@ -58,6 +73,14 @@ const AddPost = () => {
                     <input type="number" className="text-fields" name="price"/><br/>
                     <label htmlFor="number" className="text-labels">Number</label><br/>
                     <input name="number" className="text-fields" type="text"/><br/>
+                    <label htmlFor="categories" className="text-labels">Category</label><br/>
+                    <select className="category-options">
+                        {
+                            categories && categories.map(cat => {
+                                return <option key={cat.id}>{cat.name}</option>
+                            })
+                        }
+                    </select>
                     <input onClick={submitHandler} id="add-item-btn" value="Create" type="submit"/>
                     <div id="desc-item">
                         <h2>Description</h2>

@@ -141,3 +141,41 @@
 #add-item:hover {
     background-color: rgb(147, 188, 54);
 }
+
+#search-input{
+    position: relative;
+    left: 100px;
+    width: 50%;
+    height: 45px;
+    font-size: 30px;
+    margin-top: 20px;
+    border: none;
+    padding-left: 70px;
+    border: none;
+    box-shadow: 4px 8px 10px black;
+    background-color: rgb(188, 193, 209);
+}
+
+.search-bar img{
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    width: 35px;
+    height: 28px;
+    position: relative;
+    top: 13px;
+    left: 157px;
+    z-index: 2;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-left: 50px;
+    background-color: rgb(153, 161, 184);
+    padding: 10px;
+}
+
+.search-bar img:hover{
+    background-color: gray;
+}
+
+input:focus {
+    outline: none;
+}

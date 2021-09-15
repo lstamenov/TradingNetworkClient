@@ -30,8 +30,8 @@
 
 #desc-item {
     position: relative;
-    left: -230px;
-    bottom: 360px;
+    left: -240px;
+    bottom: 380px;
     text-align: center;
     width: 120%;
     font-size: 30px;
@@ -141,6 +141,22 @@
     box-shadow: 3px 5px 15px black;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.category-options{
+    float: right;
+    position: relative;
+    bottom: 260px;
+    left: 170px;
+    width: 250px;
+    background-color: transparent;
+    height: 55px;
+    border: none;
+    border-top: wheat 3px solid;
+    box-shadow: 3px 5px 15px black;
+    border-radius: 10px;
+    font-size: 25px;
+    padding-left: 10px;
 }
 
 #add-item-btn:hover {
