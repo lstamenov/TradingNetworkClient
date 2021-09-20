@@ -1,6 +1,6 @@
 .nav {
     margin-top: -8px;
-    background-color: dimgray;
+    background-color: rgb(90, 107, 121);
     position: fixed;
     left: -8px;
     top: 0px;
@@ -9,12 +9,13 @@
     padding-right: 16px;
     border-bottom: solid wheat 3px;
     z-index: 100;
+    margin-bottom: 20px;
 }
 
 div .btn {
     position: relative;
     left: 1410px;
-    top: -110px;
+    top: -135px;
     width: 9%;
     height: 110px;
     background-color: transparent;
@@ -31,11 +32,11 @@ a {
 }
 
 button:hover {
-    background-color: gray;
+    background-color: rgb(128, 138, 146);
 }
 
 #login-logout:hover{
-    background-color: gray;
+    background-color: rgb(128, 138, 146);
 }
 
 .auth-btns button{
@@ -44,17 +45,20 @@ button:hover {
     font-size: 35px;
     background-color: transparent;
     border: none;
+    position: relative;
+    top: -25px;
 }
 
 .auth-btns button:hover{
-    background-color: gray;
+    background-color: rgb(128, 138, 146);
 }
 
 #profili-link-pic{
     position: relative;
-    top: 15px;
-    width: 50px;
-    height: 50px;
+    top: 12px;
+    width: 90px;
+    height: 90px;
     margin-left: 20px;
-    margin-right: 20px;
+    border-radius: 50%;
+    border: 2px solid black;
 }

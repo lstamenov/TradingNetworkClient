@@ -24,7 +24,7 @@ const Login = () => {
             }else{
                 setError('Invalid username or password');
             }
-        }, 3000);
+        }, 2000);
     }
 
     return (

@@ -30,8 +30,7 @@ const AddPost = () => {
         let itemPrice = inputElements[1].value;
         let itemDesc = document.getElementById('desc-text').value;
         let itemNumber = inputElements[2].value;
-        let categoryName = categoryOptionsMenu.options[categoryOptionsMenu.selectedIndex].text;
-        console.log(categoryName);
+        let categoryId = categoryOptionsMenu.options[categoryOptionsMenu.selectedIndex].value;
         let form = new FormData();
 
         form.append('title', itemName);
@@ -40,7 +39,7 @@ const AddPost = () => {
         form.append('phoneNumber', itemNumber);
         form.append('picture', photo);
         form.append('ownerId', JSON.parse(localStorage.getItem('user')).id);
-        form.append('categoryName', categoryName);
+        form.append('categoryId', categoryId);
 
         axios.post('http://localhost:8080/api/items/add', form, {headers: header.authHeader()})
         .then(res => console.log(res))  
@@ -77,7 +76,7 @@ const AddPost = () => {
                     <select className="category-options">
                         {
                             categories && categories.map(cat => {
-                                return <option key={cat.id}>{cat.name}</option>
+                                return <option value={cat.id} key={cat.id}>{cat.name}</option>
                             })
                         }
                     </select>

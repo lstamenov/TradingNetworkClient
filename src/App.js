@@ -28,7 +28,10 @@ function App() {
   useEffect(() => {
     if(authService.getCurrentUser()){
       axios.get(`http://localhost:8080/api/user/view/${authService.getCurrentUser().username}`)
-      .then(res => setCurrentUser(res.data))
+      .then(res => {
+        setCurrentUser(res.data);
+        console.log(res);
+      })
       .catch(err => console.log(err));
     }
   }, []);
@@ -56,10 +59,10 @@ function App() {
        <div className="nav">
             {currentUser ? 
             (<div className="auth-btns">
-                <Link to={`/user/${currentUser.username}`}><img id="profili-link-pic" src={myProfilePic}></img></Link>
+                <Link to={`/user/${currentUser.username}`}><img id="profili-link-pic" src={currentUser.profilePicture ? `data:image/jpeg;base64,${currentUser.profilePicture}` : myProfilePic}></img></Link>
                 <button onClick={authService.logout}><Link to="login">Logout</Link></button>
             </div>) : (
-              <div className="auth-btns">
+              <div style={{'margin-top': '20px'}} className="auth-btns">
                 <button><Link to="/login">Login</Link></button>
                 <button><Link to="/register">Sign Up</Link></button>
               </div>

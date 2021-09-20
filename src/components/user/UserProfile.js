@@ -33,10 +33,16 @@ const UserProfile = () => {
     }
 
     const fetch = async () => {
-        const res = await axios.get(`http://localhost:8080/api/user/view/${username}`);
-        const data = await res.data;
-        setUser(data);
-        setItems(data.itemsPosted);
+        console.log(username);
+        try{
+            const res = await axios.get(`http://localhost:8080/api/user/view/${username}`);
+            const data = await res.data;
+            const itemsPostedByUser = await data.itemsPosted;
+            setItems(itemsPostedByUser);
+            setUser(data);
+        }catch(err) {
+            console.log(err);
+        }
     };
 
     useEffect(() => {
@@ -50,7 +56,7 @@ const UserProfile = () => {
     return(
         
         <div className="user-profile-page">
-            {!isLoading &&
+            {!isLoading && user &&
             <div>
                 {user.profilePicture ? <img id="profile-picture" src={`data:image/jpeg;base64,${user.profilePicture}`}></img> : <img src={defaultPhoto}></img>}
                 {currentUser.getCurrentUser() ? currentUser.getCurrentUser().username === username ? <button onClick={picUploadClickHandler} id="change-pic">change photo</button> : <></> : <></>}
@@ -77,7 +83,7 @@ const UserProfile = () => {
                 </div>
             </div>
             }
-            {isLoading &&
+            {isLoading && user &&
                 <div>
                     <img className="skeleton"></img>
                     {currentUser.getCurrentUser() ? currentUser.getCurrentUser().username === username ? <button className="skeleton" style={{color: 'transparent'}} id="change-pic">change photo</button> : <></> : <></>}

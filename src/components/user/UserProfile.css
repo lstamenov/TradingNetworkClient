@@ -2,9 +2,9 @@
     background-color: rgb(157, 171, 180);
     width: 50%;
     margin: auto;
-    height: 700px;
+    height: 725px;
     border-radius: 10px;
-    opacity: 0.9;
+    /* opacity: 0.9; */
     position: relative;
     top: 120px;
     box-shadow: 7px 12px 20px  ;
@@ -26,21 +26,21 @@
     padding: 0px;
     height: 250px;
     width: 220px;
-    box-shadow: 3px 7px 15px rgb(75, 73, 73);
+    box-shadow: 3px 7px 15px;
 }
 
 #change-pic{
-    background-color: rgb(111, 143, 201);
+    background-color: rgb(157, 169, 192);
     float: right;
     position: relative;
-    top: 271px;
+    top: 280px;
     padding: 5px;
-    right: 25px;
+    right: 35px;
     border-radius: 12px;
     border: none;
-    border-bottom: solid 2px wheat;
     font-size: 25px;
     cursor: pointer;
+    box-shadow: 3px 7px 15px rgb(75, 73, 73);
 }
 
 #change-pic:hover{
@@ -87,7 +87,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     position: relative;
-    top: -220px;
+    top: -180px;
+    left: 20px;
     overflow-y: scroll;
     border-top: 2px solid gray;
     border-bottom: 2px solid gray;

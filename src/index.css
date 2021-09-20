@@ -1,7 +1,5 @@
 body {
-    background: url('https://static.vecteezy.com/system/resources/previews/001/903/002/non_2x/online-shopping-on-mobile-shopping-bags-and-boxes-on-blue-background-online-shop-on-mobile-application-vector.jpg');
-    background-size: cover;
-    height: calc(100vh - 80px);
+    background-color: rgba(117, 141, 155, 0.486);
 }
 
 * {

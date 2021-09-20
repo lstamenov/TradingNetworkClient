@@ -4,9 +4,8 @@
     position: fixed;
     top: 130px;
     left: 500px;
-    background-color: rgb(157, 171, 216);
+    background-color: rgb(173, 177, 190);
     border-radius: 12px;
-    border: wheat 3px solid;
     font-family: cursive;
 }
 
@@ -16,8 +15,9 @@
     opacity: 0.8;
     border-radius: 12px;
     position: relative;
-    right: auto;
-    top: -247px;
+    right: -30px;
+    top: -217px;
+    box-shadow: 8px 8px 10px;
 }
 
 #desc {
@@ -84,11 +84,11 @@
 
 .buy-btn {
     position: relative;
-    top: -350px;
+    top: -240px;
     float: right;
     width: 220px;
     height: 92px;
-    right: 100px;
+    right: -600px;
     border-radius: 12px;
     border: none;
     font-size: 30px;
@@ -122,8 +122,3 @@
 a {
     color: black;
 }
-
-/* .user-card{
-    position: relative;
-    top: -300px;   
-} */

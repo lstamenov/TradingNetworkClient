@@ -22,8 +22,6 @@ const UserCard = (props) => {
             {user.profilePicture ? <img src={`data:image/jpeg;base64,${user.profilePicture}`}></img> : <img src={defaultPhoto}></img>}
 
                 <div className="user-details">
-                    <h2>{user.username}</h2>
-                    <h2>{user.email}</h2>
                     <h3>{user.firstName} {user.lastName}</h3>
                 </div>
                 <button className="view-user"><Link to={`/user/${user.username}`}>view profile</Link></button>

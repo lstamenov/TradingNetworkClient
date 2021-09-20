@@ -60,8 +60,6 @@ function Items (){
                 <div className="user-card">
                     <img className="skeleton"></img>
                     <div className="user-details skeleton">
-                        <h2 style={{color: 'transparent'}} className="skeleton">some name</h2>
-                        <h2 style={{color: 'transparent'}} className="skeleton">some name</h2>
                         <h3 style={{color: 'transparent'}} className="skeleton">some name</h3>
                     </div>
                     <button className="view-user skeleton"></button>
