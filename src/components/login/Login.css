@@ -1,10 +1,10 @@
 #login-wrapper{
     width: 35%;
-    height: 430px;
+    height: 30%;
     position: relative;
-    top: 230px;
-    left: 650px;
-    background-color: rgb(157, 171, 216);
+    top: 20%;
+    left: 33%;
+    background-color: rgb(178, 182, 196);
     border-radius: 12px;
     opacity: 0.95;
     box-shadow: 10px 12px 15px black;
@@ -12,6 +12,7 @@
     animation-duration: 2s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
+    padding: 2%;
 }
 
 @keyframes anim {
@@ -30,48 +31,52 @@
 
 #login-form input{
     background-color: rgb(180, 189, 218);;
-    width: 320px;
-    height: 35px;
-    border-radius: 12px;
-    border-top: wheat solid 2px;
-    font-size: 20px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    width: 60%;
+    border-radius: 5px;
+    font-size: 150%;
+    border: none;
+    margin-bottom: 5%;
+    margin-top: 7%;
     box-shadow: 5px 5px 15px black;
+    transition: 0.5s;
+}
+
+#login-form input:focus{
+    background-color: aliceblue;
+    width: 65%;
 }
 
 #login-form label{
-    font-size: 25px;
+    font-size: 130%;
 }
 
 #login-form {
-    background-color: rgb(132, 152, 221);
+    background-color: rgb(153, 166, 211);
     opacity: 0.95;
     text-align: center;
     position: relative;
-    height: 300px;
-    top: 45px;
     width: 60%;
-    left: 115px;
-    border-radius: 12px;
-    padding: 20px;
+    left: 16%;
+    border-radius: 5px;
+    padding: 3%;
+    padding-bottom: 6%;
+    box-shadow: 1px 8px 15px;
 }
 
 #login-btn{
-    font-size: 25px;
+    font-size: 150%;
     background-color: transparent;
-    border-radius: 12px;
-    border-top: wheat solid 1px;
-    width: 170px;
-    height: 50px;
+    border: none;
+    border-radius: 5px;
+    width: 50%;
     cursor: pointer;
-    position: relative;
-    top: 20px;
     box-shadow: 3px 5px 15px black;
+    margin-top: 5%;
+    transition: 1s;
 }
 
 #login-btn:hover{
-    background-color: rgb(157, 171, 216);;
+    background-color: rgb(46, 68, 134);;
 }
 
 #login-error{
@@ -83,6 +88,6 @@
 
 .loader{
     position: relative;
-    bottom: 150px;
-    left: 350px;
+    bottom: 200px;
+    left: 50%;
 }

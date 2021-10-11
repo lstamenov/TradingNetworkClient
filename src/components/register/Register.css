@@ -1,53 +1,68 @@
 #registration-wrapper{
     width: 35%;
-    height: 630px;
     position: relative;
-    top: 180px;
-    left: 650px;
-    background-color: rgb(157, 171, 216);
-    border-radius: 12px;
-    border: wheat 3px solid;
+    margin-top: 9%;
+    left: 33%;
+    background-color: rgb(174, 183, 211);
+    border-radius: 5px;
     opacity: 0.95;
     text-align: center;
+    padding-bottom: 2%;
+    box-shadow: 5px 8px 15px;
+    animation: register-anim;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes register-anim {
+    0%{
+        left: 15%;
+    }
+    50%{
+        left: 45%;
+    }
+    100%{
+        left: 33%;
+    }
 }
 
 #registration-wrapper input {
-    width: 250px;
-    height: 30px;
-    font-size: 20px;
-    background-color: rgb(158, 179, 207);
-    box-shadow: 10px 10px 8px #888888;
-    border-radius: 10px;
-    position: relative;
-    top: 20px;
-    margin-bottom: 10px;
+    width: 50%;
+    font-size: 150%;
+    background-color: rgb(176, 189, 206);
+    box-shadow: 3px 3px 8px;
+    border-radius: 3px;
+    margin-bottom: 1%;
+    border: none;
+    transition: 1s;
 }
 
 label {
-    position: relative;
-    top: 20px;
-    font-size: 20px;
+    margin-top: 5%;
+    font-size: 110%;
 }
 
-input:focus{
-    border: yellowgreen;
+#registration-wrapper input:focus{
+    background-color: aliceblue;
+    width: 55%;
 }
 
 #register-button{
-    position: relative;
-    top: 50px;
-    width: 180px;
-    height: 45px;
+    width: 35%;
     cursor: pointer;
     background-color: transparent;
-    border-radius: 12px;
-    box-shadow: 10px 10px 8px #888888;
-    border: wheat 2px solid;
-    font-size: 25px;
+    border-radius: 2px;
+    border: none;
+    font-size: 200%;
+    box-shadow: 5px 5px 10px;
+    margin-top: 7%;
+    transition: 1s;
 }
 
 #register-button:hover{
-    background-color: rgb(126, 164, 214);
+    background-color: rgb(150, 177, 212);
+    width: 40%;
 }
 
 .errors {

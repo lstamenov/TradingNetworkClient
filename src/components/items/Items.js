@@ -24,7 +24,7 @@ function Items (){
 
         setTimeout(() => {
             setIsLoading(false);
-        }, 3000)
+        }, 2000)
     }, []);
     
     let datePosted = String(item.datePosted).substring(0,10);
@@ -42,8 +42,8 @@ function Items (){
                 </div>
                 <img id="pic" src={`data:image/jpeg;base64,${item.picture}`} />
                 <UserCard username={item.owner.username}/>
-                {currUser.getCurrentUser() && owner ? owner.username === currUser.getCurrentUser().username ? <button className="buy-btn"><Link to={`/items/edit/${item.id}`}>Edit</Link></button> : <button class="buy-btn"><Link to={{pathname: `/order/${item.id}`}}>Buy Now</Link></button>
- : <button className="buy-btn"><Link to={{pathname: `/order/${item.id}`}}>Buy Now</Link></button>}
+                {currUser.getCurrentUser() && owner ? owner.username === currUser.getCurrentUser().username ? <button className="buy-btn"><Link to={`/items/edit/${item.id}`}>Edit</Link></button> : <></>
+ : <></>}
             </div>
             }
             {isLoading &&

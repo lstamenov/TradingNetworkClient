@@ -83,7 +83,7 @@ const EditItem = () => {
     }
 
     return(
-        <div id="item-wrapper">
+        <div id="item-wrapper-edit">
             <form id="add-form">
                     <img id="default-photo" src={!photo ? item.picture ? `data:image/jpeg;base64,${item.picture}` : defaultPhoto : URL.createObjectURL(photo)}></img>
                     <button type="button" onClick={uploadPhotoHandler} id="upload-btn">Change photo</button>

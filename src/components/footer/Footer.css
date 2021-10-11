@@ -10,18 +10,11 @@
     background-color: rgb(83, 104, 121);
 }
 
-#gmail {
-    height: 60px;
-    position: relative;
-    bottom: 87px;
-    padding-right: 30px;
-}
-
 .icons {
-    height: 80px;
+    height: 50%;
+    width: 1%;
     position: relative;
-    top: auto;
-    padding-right: 30px;
+    top: 10%;
 }
 
 

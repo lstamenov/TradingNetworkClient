@@ -30,7 +30,6 @@ function App() {
       axios.get(`http://localhost:8080/api/user/view/${authService.getCurrentUser().username}`)
       .then(res => {
         setCurrentUser(res.data);
-        console.log(res);
       })
       .catch(err => console.log(err));
     }
@@ -42,7 +41,6 @@ function App() {
     let result = false;
 
     if(currentUser){
-      console.log(id);
       currentUser.itemsPosted.forEach(itm => {
         if(itm.id == id){
           result = true;
@@ -62,14 +60,16 @@ function App() {
                 <Link to={`/user/${currentUser.username}`}><img id="profili-link-pic" src={currentUser.profilePicture ? `data:image/jpeg;base64,${currentUser.profilePicture}` : myProfilePic}></img></Link>
                 <button onClick={authService.logout}><Link to="login">Logout</Link></button>
             </div>) : (
-              <div style={{'margin-top': '20px'}} className="auth-btns">
+              <div className="auth-btns">
                 <button><Link to="/login">Login</Link></button>
                 <button><Link to="/register">Sign Up</Link></button>
               </div>
             )}
-            <button className="btn"><Link to="/">Home</Link></button>
-            <button className="btn"><Link to="/about">About</Link></button>
-            <button className="btn"><Link to="/items">Items</Link></button>
+            <div className="btn">
+              <button><Link to="/">Home</Link></button>
+              <button><Link to="/about">About</Link></button>
+              <button><Link to="/items">Items</Link></button>
+            </div>
         </div>
       <Switch>
         <Route path="/items/edit/:id" exact>
@@ -102,7 +102,7 @@ function App() {
           <Faq />
         </Route>
         <Route path="/add-post" exact>
-          <AddPost />
+          {currentUser ? <AddPost /> : <Login />}
         </Route>
         <Route path="/login" exact>
           {localStorage.getItem('user') ? <NotFound /> : <Login />}
@@ -114,7 +114,7 @@ function App() {
           <NotFound />
         </Route>
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
     </div>
     );
 }

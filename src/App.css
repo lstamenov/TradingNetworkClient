@@ -1,26 +1,25 @@
 .nav {
-    margin-top: -8px;
     background-color: rgb(90, 107, 121);
     position: fixed;
-    left: -8px;
+    left: -1%;
     top: 0px;
-    height: 110px;
-    width: 100%;
-    padding-right: 16px;
+    width: 101%;
     border-bottom: solid wheat 3px;
     z-index: 100;
-    margin-bottom: 20px;
 }
 
-div .btn {
-    position: relative;
-    left: 1410px;
-    top: -135px;
-    width: 9%;
-    height: 110px;
+.btn button{
+    width: 20%;
     background-color: transparent;
     border: none;
-    font-size: 35px;
+    font-size: 200%;
+    float: right;
+    padding: 2.2%;
+}
+
+.btn{
+    width: 45%;
+    float: right;
 }
 
 a:visited {
@@ -40,13 +39,16 @@ button:hover {
 }
 
 .auth-btns button{
-    width: 10%;
-    height: 110px;
-    font-size: 35px;
+    width: 20%;
+    font-size: 200%;
+    padding: 2%;
     background-color: transparent;
     border: none;
-    position: relative;
-    top: -25px;
+}
+
+.auth-btns{
+    width: 50%;
+    display: inline-block;
 }
 
 .auth-btns button:hover{
@@ -54,11 +56,11 @@ button:hover {
 }
 
 #profili-link-pic{
-    position: relative;
-    top: 12px;
-    width: 90px;
-    height: 90px;
-    margin-left: 20px;
+    margin-top: 1%;
+    margin-bottom: -2.5%;
+    margin-right: 1%;
+    width: 8%;
+    height: 10%;
+    margin-left: 3%;
     border-radius: 50%;
-    border: 2px solid black;
 }

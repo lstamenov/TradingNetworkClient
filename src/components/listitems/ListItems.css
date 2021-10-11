@@ -1,25 +1,38 @@
 #list-wrapper {
-    width: 80%;
-    height: 700px;
+    width: 81.5%;
+    height: 580px;
     position: relative;
-    top: 110px;
-    right: 40px;
     float: right;
-    background-color: rgb(157, 171, 216);
-    border-radius: 12px;
+    background-color: rgb(179, 187, 212);
+    border-radius: 1%;
     border: wheat 3px solid;
     box-shadow: 7px 10px 25px black;
     animation: heading;
     animation-duration: 3s;
     animation-fill-mode: forwards;
     opacity: 0.95;
+    padding-bottom: 2%;
+}
+
+.add-item-for-sale{
+    height: 12%;
+    width: 10%;
+    font-size: 150%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    margin-left: 89%;
+    background-color: rgb(197, 207, 230);
+    border-radius: 5%;
+    box-shadow: 4px 8px 10px black;
+    transition: 1s;
+    cursor: pointer;
+    border: none;
 }
 
 .items-list {
     background-color: rgb(129, 150, 221);
     height: 75%;
     position: relative;
-    top: 19%;
     overflow-y: scroll;
     padding: 20px;
     display: grid;
@@ -32,7 +45,7 @@
     transition: 1s;
     text-align: center;
     height: 88%;
-    margin: 10px;
+    margin: 2%;
 }
 
 .item:hover{
@@ -42,30 +55,29 @@
 .item-img{
     height: 320px;
     position: relative;
-    top: 0px;
-    margin: 20px;
+    margin: 5%;
     width: 80%;
 }
 
 .item-title{
-    font-size: 40px;
+    font-size: 250%;
     position: relative;
-    top: -45px;
+    top: -5%;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
 
 .item-date-price{
     position: relative;
-    top: -50px;
+    top: -10%;
     text-align: left;
     width: 90%;
-    left: 20px;
-    font-size: 30px;
+    left: 2%;
+    font-size: 150%;
 }
 
 .item-date-price span {
-    font-size: 20px;
+    font-size: 80%;
 }
 
 @keyframes heading {
@@ -74,7 +86,7 @@
     }   
     
     100%{
-        top: 130px;
+        top: 100px;
     }
 }
 
@@ -89,13 +101,11 @@
 
 .sidebar-nav{
     height: 100%;
-    width: 300px;
+    width: 18%;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgb(129, 150, 221);
-    overflow-x: hidden;
-    padding-top: 20px;
+    background-color: rgb(179, 187, 212);
     box-shadow: 7px 8px 15px black;
     text-align: center;
     animation: load-sidebar;
@@ -104,23 +114,21 @@
 }
 
 #search-button{
-    font-size: 30px;
-    height:45px;
-    width: 120px;
-    background-color: rgb(157, 176, 218);
-    border-radius: 5px;
+    font-size: 200%;
+    width: 40%;
+    background-color: rgb(197, 207, 230);
+    border-radius: 5%;
     box-shadow: 4px 8px 10px black;
     transition: 1s;
     cursor: pointer;
     border: none;
     position: relative;
-    top: -150px;
+    top: -300px;
 }
 
 #search-button:hover{
     background-color: rgb(196, 203, 226);
-    height: 50px;
-    width: 130px;
+    width: 45%;
 }
 
 @keyframes load-sidebar {
@@ -140,31 +148,27 @@
 #search-input{
     position: relative;
     width: 80%;
-    height: 35px;
-    font-size: 20px;
-    /* margin-top: 20px; */
+    font-size: 160%;
     top: -115px;
     border: none;
     border-left: 1px solid black;
-    padding-left: 40px;
+    padding-left: 15%;
     border-radius: 5px;
     box-shadow: 4px 8px 10px black;
-    background-color: rgb(157, 176, 218);
+    background-color: rgb(207, 215, 231);
     transition: 1s;
 }
 
 #search-input:focus{
-    background-color: rgb(196, 203, 226);
+    background-color: rgb(247, 247, 247);
 }
 
 .search-bar{
-    position: relative;
-    top: 150px;
+    height: min-content;
 }
 
 .search-bar img{
-    width: 30px;
-    height: 30px;
+    width: 11%;
     position: relative;
     top: -70px;
     float: left;
@@ -195,17 +199,17 @@ input:focus{
     border: none;
     width: 95%;
     height: 35px;
-    font-size: 20px;
+    font-size: 120%;
     box-shadow: 4px 8px 10px black;
     border-radius: 5px;
-    background-color: rgb(157, 176, 218);
+    background-color: rgb(207, 215, 231);
     transition: 1s;
     position: relative;
     top: -15px;
 }
 
 .category-option:focus{
-    background-color: rgb(196, 203, 226);
+    background-color: rgb(247, 247, 247);
 }
 
 .category-wrapper{
@@ -216,11 +220,10 @@ input:focus{
 .price-range input{
     border: none;
     width: 35%;
-    margin: 10px;
-    font-size: 25px;
-    background-color: rgb(157, 176, 218);
+    margin: 2%;
+    font-size: 150%;
+    background-color: rgb(207, 215, 231);
     box-shadow: 4px 8px 10px black;
-    height: 35px;
     border-radius: 5px;
     transition: 1s;
     position: relative;
@@ -228,10 +231,10 @@ input:focus{
 }
 
 .price-range input:focus{
-    background-color: rgb(196, 203, 226);
+    background-color: rgb(247, 247, 247);
 }
 
 .price-range{
     position: relative;
-    top: -150px;
+    top: -300px;
 }

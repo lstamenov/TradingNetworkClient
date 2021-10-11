@@ -6,6 +6,8 @@ import defaultPhoto from './user.png';
 import './UserProfile.css';
 import currentUser from '../../services/auth.service';
 import header from '../../services/auth-header';
+import Rating from '../../ratings/Rating';
+import Ratings from '../../ratings/Ratings';
 
 const UserProfile = () => {
     const [user, setUser] = useState({});
@@ -33,7 +35,6 @@ const UserProfile = () => {
     }
 
     const fetch = async () => {
-        console.log(username);
         try{
             const res = await axios.get(`http://localhost:8080/api/user/view/${username}`);
             const data = await res.data;
@@ -51,24 +52,25 @@ const UserProfile = () => {
         setTimeout(() => {
             setIsLoading(false);
         }, 2000)
-    }, []);
+    }, [username]);
 
     return(
         
         <div className="user-profile-page">
             {!isLoading && user &&
             <div>
-                {user.profilePicture ? <img id="profile-picture" src={`data:image/jpeg;base64,${user.profilePicture}`}></img> : <img src={defaultPhoto}></img>}
+                {user.profilePicture ? <img id="profile-picture" className="user-picture" src={`data:image/jpeg;base64,${user.profilePicture}`}></img> : <img className="user-picture" src={defaultPhoto}></img>}
                 {currentUser.getCurrentUser() ? currentUser.getCurrentUser().username === username ? <button onClick={picUploadClickHandler} id="change-pic">change photo</button> : <></> : <></>}
                 <input onChange={picUploadChangeHandler} id="pic-uploader" type="file" style={{'display': 'none'}}/>
-                <h2 className="detail"><span>name: </span>{user.firstName} {user.lastName}</h2>
-                <h2 className="detail"><span>username: </span>{username}</h2>
-                <div className="users-posts">
+                <div className="details-wrapper">
+                    <h2 className="detail"><span>name: </span>{user.firstName} {user.lastName}</h2>
+                    <h2 className="detail"><span>username: </span>{username}</h2>
+                </div>
                 {
                     <div className="user-items">
                     {
                         items ? items.map(item => {
-                            return <div className="user-item">
+                            return <div key={item.id} className="user-item">
                                 <Link to={`/items/${item.id}`}>
                                     <img src={`data:image/jpeg;base64,${item.picture}`}></img>
                                     <h2 id="item-title">{item.name}</h2>
@@ -80,25 +82,26 @@ const UserProfile = () => {
                     }
                     </div>
                 }
-                </div>
             </div>
             }
             {isLoading && user &&
                 <div>
-                    <img className="skeleton"></img>
+                    <img className="skeleton user-picture"></img>
                     {currentUser.getCurrentUser() ? currentUser.getCurrentUser().username === username ? <button className="skeleton" style={{color: 'transparent'}} id="change-pic">change photo</button> : <></> : <></>}
-                    <h2 style={{color: 'transparent'}} className="detail skeleton"><span>name: </span>{user.firstName} {user.lastName}</h2>
-                    <h2 style={{color: 'transparent'}} className="detail skeleton"><span>username: </span>{username}</h2>
+                    <div className="details-wrapper">
+                        <h2 style={{color: 'transparent'}} className="detail skeleton"><span>name: </span>{user.firstName} {user.lastName}</h2>
+                        <h2 style={{color: 'transparent'}} className="detail skeleton"><span>username: </span>{username}</h2>
+                    </div>
                     <div className="users-posts">
                     {
                         <div className="user-items">
                         {
                             items ? items.map(item => {
-                                return <div className="user-item skeleton">
+                                return <div key={item.id} className="user-item skeleton">
                                     <img ></img>
                                     <h2 style={{color: 'transparent'}} id="item-title">{item.name}</h2>
-                                    <h3 style={{color: 'transparent'}} className="date-price">posted on: {String(item.datePosted).substring(0, 10)}</h3>
-                                    <h3 style={{color: 'transparent'}} className="date-price">price: {item.price}$</h3>
+                                        <h3 style={{color: 'transparent'}} className="date-price">posted on: {String(item.datePosted).substring(0, 10)}</h3>
+                                        <h3 style={{color: 'transparent'}} className="date-price">price: {item.price}$</h3>
                                 </div>
                             }): <p>...</p>
                         }
@@ -107,6 +110,8 @@ const UserProfile = () => {
                     </div>
                 </div>
             }
+            {user.id ? <Ratings user={user}/> : <></>}
+            {currentUser.getCurrentUser() ? currentUser.getCurrentUser().id !== user.id ? <Rating seller={user} user={currentUser.getCurrentUser()}/> : <></> : <h2>Login to write a review</h2>}
         </div>
     )
 }

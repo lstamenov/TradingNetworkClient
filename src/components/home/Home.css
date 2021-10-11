@@ -1,6 +1,6 @@
 .about{
     animation: heading;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 

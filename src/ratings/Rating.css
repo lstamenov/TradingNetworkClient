@@ -1,0 +1,60 @@
+.star{
+    cursor: pointer;
+}
+
+
+.rating-user-picture{
+    border-radius: 50%;
+    width: 9%;
+    height: 65px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    display: inline;
+    box-shadow: 5px 5px 8px;
+}
+
+.content{
+    margin-left: 13%;
+    margin-top: -9%;
+    background-color: rgb(184, 181, 181);
+    width: 55%;
+    padding: 2%;
+    box-shadow: 5px 5px 12px;
+    border-radius: 3px;
+}
+
+.comment{
+    resize: none;
+    height: 100px;
+    width: 90%;
+    margin-left: 4%;
+    margin-top: 3%;
+    background-color: rgb(209, 204, 204);
+    font-size: 110%;
+    transition: 1s;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px;
+}
+
+.comment:focus{
+    background-color: white;
+}
+
+.stars{
+    display: inline;
+}
+
+.submit-review-button{
+    margin-left: 33%;
+    margin-bottom: -10%;
+    margin-top: 2%;
+    width: 32%;
+    background-color: rgb(170, 170, 170);
+    border: none;
+    box-shadow: 1px 1px 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 1s;
+    font-size: 120%;
+}

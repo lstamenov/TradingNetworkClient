@@ -1,22 +1,21 @@
 #item-wrapper {
     width: 50%;
-    height: 730px;
-    position: fixed;
-    top: 130px;
-    left: 500px;
+    position: relative;
+    left: 25%;
     background-color: rgb(173, 177, 190);
-    border-radius: 12px;
+    border-radius: 5px;
     font-family: cursive;
+    margin-top: 5.5%;
 }
 
 #pic {
-    width: 420px;
-    height: 420px;
+    width: 45%;
+    height: 400px;
     opacity: 0.8;
-    border-radius: 12px;
+    border-radius: 5px;
     position: relative;
-    right: -30px;
-    top: -217px;
+    top: -210px;
+    margin-left: 1%;
     box-shadow: 8px 8px 10px;
 }
 
@@ -24,90 +23,87 @@
     border-top: solid 2px black;
     border-bottom: solid 2px black;
     width: 44%;
-    height: 150px;
-    font-size: 15px;
+    height: 30%;
     float: right;
     position: relative;
-    top: 85px;
-    right: 10px;
-    padding: 10px;
+    margin-top: 15%;
+    padding: 3%;
     font-family: Arial, Helvetica, sans-serif;
     overflow-y: auto;
-    font-size: 20px;
+    font-size: 120%;
 }
 
 #title {
     float: right;
     position: relative;
-    right: 15px;
+    right: 4%;
     bottom: 20px;
-    font-size: 50px;
+    font-size: 250%;
     width: 45%;
     text-align: center;
     background-color: rgb(157, 171, 180);
-    border-radius: 15px;
-    box-shadow: 10px 10px 10px gray;
+    border-radius: 2px;
+    box-shadow: 5px 5px 10px;
 }
 
 #price {
     position: relative;
-    left: 745px;
+    left: 75%;
     top: 80px;
-    font-size: 30px;
+    font-size: 180%;
     width: fit-content;
     background-color: rgb(157, 171, 180);
-    border-radius: 15px;
-    padding: 10px;
-    box-shadow: 10px 10px 10px gray;
+    border-radius: 2px;
+    padding: 1%;
+    box-shadow: 5px 5px 10px;
 }
 
 #price span {
-    font-size: 25px;
+    font-size: 80%;
 }
 
 #number {
     position: relative;
-    right: -630px;
     text-align: right;
+    left: 60%;
     top: 80px;
-    font-size: 30px;
+    font-size: 180%;
     width: fit-content;
-    padding: 10px;
+    padding: 1%;
     background-color: rgb(157, 171, 180);
-    border-radius: 12px;
-    box-shadow: 10px 10px 10px gray;
+    border-radius: 2px;
+    box-shadow: 5px 5px 10px ;
 }
 
 #number span {
-    font-size: 25px;
+    font-size: 80%;
 }
 
 .buy-btn {
     position: relative;
-    top: -240px;
+    right: 40%;
+    margin-top: -10%;
     float: right;
-    width: 220px;
-    height: 92px;
-    right: -600px;
+    width: 20%;
     border-radius: 12px;
     border: none;
-    font-size: 30px;
+    font-size: 220%;
     background-color: dimgray;
     cursor: pointer;
     box-shadow: 10px 10px 10px gray;
-
+    transition: 1s;
 }
 
 #date-posted {
     position: relative;
-    left: 575px;
+    left: 52%;
     top: 80px;
-    font-size: 30px;
+    font-size: 180%;
     width: fit-content;
-    padding: 10px;
+    padding: 1%;
     background-color: rgb(157, 171, 180);
-    border-radius: 12px;
-    box-shadow: 10px 10px 10px gray;
+    border-radius: 2px;
+    box-shadow: 5px 5px 5px;
 
 }
 

@@ -7,10 +7,7 @@ import searchIcon from './loupe.png';
 const ListItems = () => {  
     const [items, setItems] = useState(null);
     const [filteredItems, setFilteredItems] = useState();
-    const [searchValue, setSearchValue] = useState('');
     const [category, setCategory] = useState('all');
-    const [priceFrom, setPriceFrom] = useState(0);
-    const [priceTo, setPriceTo] = useState('');
     const [categories, setCategories] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -19,23 +16,23 @@ const ListItems = () => {
 
         let currItems = [];
 
-        if(category !== 'all'){
+        if(category != 'all'){
             setFilteredItems(category.items);
             currItems = category.items;
-            console.log(category.items);
         }else{
             currItems = items;
             setFilteredItems(items);
-            console.log(items);
         }
         let findValue = document.getElementById('search-input').value;
         let priceFrom = document.getElementById('from-price').value;
         let priceTo = document.getElementById('to-price').value;
 
-        if(Number(priceTo)){
+        if(Number(priceTo) && Number(priceFrom)){
             setFilteredItems(currItems.filter(item => item.name.includes(findValue) && Number(priceFrom) <= item.price && item.price <= Number(priceTo)));
         }else{
-            setFilteredItems(currItems.filter(item => item.name.includes(findValue)));
+            if(currItems){
+                setFilteredItems(currItems.filter(item => item.name.includes(findValue)));
+            }
         }
     }
 
@@ -60,9 +57,13 @@ const ListItems = () => {
 
     const categoryOnChangeHandler = (e) => {
         const categoryName = e.target.options[e.target.selectedIndex].text;
-        axios.get(`http://localhost:8080/api/categories/view/category/${categoryName}`)
-        .then(res => setCategory(res.data))
-        .catch(err => console.log(err));
+        if(categoryName !== 'all'){
+            axios.get(`http://localhost:8080/api/categories/view/category/${categoryName}`)
+            .then(res => setCategory(res.data))
+            .catch(err => console.log(err));
+        }else{
+            setCategory('all');
+        }
     }
 
     return (
@@ -94,6 +95,7 @@ const ListItems = () => {
             </div>
         </div>
         <div id="list-wrapper">
+            <button className="add-item-for-sale"><Link to="add-post">Add Item for sale</Link></button>
             <div className="items-list">
                 {
                     items ?

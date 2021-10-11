@@ -1,40 +1,18 @@
-#form-wrapper {
-    height: 70%;
-    width: 50%;
-    position: fixed;
-    top: 150px;
-    left: 500px;
-    background-color: rgb(157, 171, 216);
-    opacity: 0.8;
-    border-radius: 12px;
-}
-
 #add-form {
-    width: 60%;
+    width: 50%;
     position: relative;
-    left: 190px;
-    height: 60%;
+    left: 25%;
+    height: min-content;
+    background-color: rgb(151, 170, 182);
+    padding-bottom: 7%;
 }
-
-#add-form input[text] {
-    margin-bottom: 10px;
-    position: relative;
-    left: 385px;
-}
-
-#add-form label {
-    margin-bottom: 10px;
-    position: relative;
-    left: 385px;
-}
-
 #desc-item {
     position: relative;
-    left: -240px;
-    bottom: 380px;
     text-align: center;
-    width: 120%;
-    font-size: 30px;
+    width: 100%;
+    font-size: 100%;
+    position: relative;
+    margin-top: -45%;
 }
 
 #desc-item textarea{
@@ -44,7 +22,7 @@
     border: none;
     border-top: 3px wheat solid;
     border-radius: 10px;
-    font-size: 25px;
+    font-size: 150%;
     background-color: transparent;
     padding: 10px;
     box-shadow: 7px 10px 20px black;
@@ -56,9 +34,11 @@
 }
 
 .text-labels {
-    font-size: 25px;
-    top: -220px;
-    left: 200px;
+    text-align: right;
+    position: relative;
+    left: 50%;
+    bottom: 310px;
+    font-size: 140%;
 }
 
 .loading-animation{
@@ -70,43 +50,44 @@
 .text-fields{
     background-color: transparent;
     position: relative;
-    left: 485px;
-    top: -270px;
-    font-size: 25px;
-    height: 55px;
-    width: 250px;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    padding-left: 15px;
+    left: 63%;
+    bottom: 350px;
+    font-size: 200%;
+    width: 30%;
+    border-radius: 5px;
+    margin-bottom: 2%;  
+    padding-left: 2%;
     border: none;
-    border-top: wheat 3px solid;
+    transition: 0.5s;
     box-shadow: 3px 5px 15px black;
-    margin-top: 5px;
+}
+
+.text-fields:focus{
+    background-color: white;
 }
 
 #default-photo {
-    width: 300px;
-    height: 300px;
+    width: 40%;
+    height: 40%;
     position: relative;
-    top: 0px;
-    left: -190px;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 7px 10px 20px black;
+    margin-top: 9.3%;
 }
 
 #upload-btn {
-    border-radius: 12px;
-    width: 160px;
-    height: 75px;
+    border-radius: 5px;
+    width: 20%;
+    height: 20%;
     background-color: gray;
-    font-size: 30px;
+    font-size: 150%;
     position: relative;
-    left: -420px;
-    top: 85px;
+    left: -30%;
+    top: 40px;
     cursor: pointer;
     border: none;
-    border-top: wheat 3px solid;
-    box-shadow: 3px 5px 15px black;
+    box-shadow: 3px 5px 10px black;
+    transition: 0.5s;
 }
 
 #upload-btn:hover {
@@ -115,52 +96,37 @@
 
 #add-item-btn {
     position: relative;
-    bottom: 20px;
-    right: -470px;
-    width: 250px;
-    height: 80px;
-    font-size: 40px;
+    left: 5%;
+    top: 120px;
+    width: 25%;
+    font-size: 220%;
     background-color: gray;
     border: none;
-    border-top: wheat 3px solid;
-    box-shadow: 3px 5px 15px black;
-    border-radius: 10px;
+    box-shadow: 3px 5px 10px black;
+    border-radius: 3px;
     cursor: pointer;
+    transition: 1s;
 }
 
 #delete-item-btn {
     position: relative;
-    bottom: 120px;
-    right: -215px;
-    width: 250px;
-    height: 80px;
-    font-size: 40px;
+    right: -45%;
+    top: 120px;
+    width: 25%;
+    font-size: 200%;
     background-color: rgb(211, 40, 40);
     border: none;
-    border-top: wheat 3px solid;
     box-shadow: 3px 5px 15px black;
-    border-radius: 10px;
+    border-radius: 3px;
     cursor: pointer;
 }
 
-.category-options{
-    float: right;
-    position: relative;
-    bottom: 260px;
-    left: 170px;
-    width: 250px;
-    background-color: transparent;
-    height: 55px;
-    border: none;
-    border-top: wheat 3px solid;
-    box-shadow: 3px 5px 15px black;
-    border-radius: 10px;
-    font-size: 25px;
-    padding-left: 10px;
+#category-options{
+    margin-left: 2%;
 }
 
 #add-item-btn:hover {
-    background-color: rgb(157, 171, 190);
+    background-color: dimgray;
 }
 
 #delete-item-btn:hover{

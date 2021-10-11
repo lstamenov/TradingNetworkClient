@@ -1,0 +1,39 @@
+.rating-wrapper{
+   background-color: rgb(170, 163, 163); 
+   margin-top: 3%;
+   width: 50%;
+   margin-left: 2%;
+   box-shadow: 5px 5px 10px;
+}
+
+.ratings-pictures{
+    border-radius: 50%;
+    width: 20%;
+}
+
+.first-to-write{
+    text-align: center;
+    margin: 3%;
+    font-size: 150%;
+}
+
+.rating-date-posted{
+    width: 25%;
+    display: inline;
+    margin-right: 5%;
+}
+.rating-details-wrapper{
+    display: inline;
+    position: relative;
+    top: -50px;
+    left: 15%;
+}
+
+.rating-feedback{
+    background-color: rgb(207, 192, 192);
+    width: 70%;
+    position: relative;
+    left: 25%;
+    top: -30px;
+    padding: 2%;    
+}

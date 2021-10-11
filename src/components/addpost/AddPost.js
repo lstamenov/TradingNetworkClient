@@ -23,8 +23,7 @@ const AddPost = () => {
         e.preventDefault();
         let inputHtmlElements = document.getElementsByClassName('text-fields');
         let inputElements = [...inputHtmlElements];
-        let categoryOptionsMenu = document.querySelector('.category-options');
-
+        let categoryOptionsMenu = document.querySelector('#category-options');
 
         let itemName = inputElements[0].value;
         let itemPrice = inputElements[1].value;
@@ -61,9 +60,9 @@ const AddPost = () => {
     }
 
     return (
-        <div id="item-wrapper">
+        <div id="add-item-wrapper">
             <form id="add-form">
-                    <img id="default-photo" src={photo == undefined ? defaultPhoto : URL.createObjectURL(photo)}></img>
+                    <img id="default-photo" src={photo === undefined ? defaultPhoto : URL.createObjectURL(photo)}></img>
                     <button type="button" onClick={uploadPhotoHandler} id="upload-btn">Upload photo</button>
                     <input onChange={onChangeHandler} id="upload-photo" type="file" style={{display: 'none'}} name="file"/><br/>
                     <label className="text-labels" htmlFor="title">Title</label><br/>
@@ -73,7 +72,7 @@ const AddPost = () => {
                     <label htmlFor="number" className="text-labels">Number</label><br/>
                     <input name="number" className="text-fields" type="text"/><br/>
                     <label htmlFor="categories" className="text-labels">Category</label><br/>
-                    <select className="category-options">
+                    <select id="category-options" className="text-fields">
                         {
                             categories && categories.map(cat => {
                                 return <option value={cat.id} key={cat.id}>{cat.name}</option>
